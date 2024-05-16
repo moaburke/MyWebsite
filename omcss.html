@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <!-- Titel på webbsidan -->
+        <title>Min Webbsida</title>
+        <!-- Föranslut till Googles typsnittsservrar -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Importera och tillämpa typsnitt "Work Sans"-->
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Länk till extern CSS-stilmall -->
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    <body>
+        <header>
+            <!-- Rubrik för webbsidan -->
+            <h1>Min <span>Webbsida</span></h1>
+        </header>
+
+        <!-- Meny -->
+        <nav>
+            <ul>
+                <!-- Navigationslänkar -->
+                <li><a href="index.html">Start</a></li>
+                <li><a href="forfattare.html">Om en Författare</a></li>
+                <li class="active"><a href="omcss.html">Om CSS</a></li><!-- Den sida som för närvarande visas -->
+                <li><a href="ommig.html">Om mig</a></li>
+            </ul>
+        </nav>
+
+        <!--  Huvudsektion för innehållet på webbsidan -->
+        <section>
+            <!-- Wrapper för huvudinnehållet på webbsidan -->
+            <div class="section-wrapper">
+                <div class="section-content">
+                    <!-- Rubrik -->
+                    <h2>Om CSS</h2>
+
+                    <!-- Delavsnitt -->
+                    <!-- Om CSS -->
+                    <div class="section-item">
+                        <!-- Rubrik för delavsnitt -->
+                        <h3>Vad är CSS?</h3>
+                        <!-- Paragraf om CSS -->
+                        <p>CSS är en förkortning av Cascading Style Sheet och utgör en grundläggande byggsten för webben, tillsammans med HTML och Javascript. Det är ett språk som används för att styra utseende och definiera layouten av en webbsida. CSS behöver ett märkspråk som HTML för att kunna utföra någonting på en webbsida. CSS kan alltså inte åstadkomma någon effekt på egen hand. </p>
+
+                        <!-- Rubrik för fråga -->
+                        <h4>Varför finns CSS?</h4>
+                        <!-- Paragraf om varför CSS finns. -->
+                        <p>HTML har som syfte att definiera strukturen och innehållet på en webbsida. När en webbläsare renderar ett HTML-dokument översätts det till en visuellt begriplig form, och för att presentera ett läsbart innehåll tillämpas fördefinierade stilar, som bland annat standardtypsnitt, fontstorlekar och avstånd. Detta kan resultera i en monoton och visuellt ointressant webbplats. Genom att modifiera ett html-elements storlek, placering, färg och layout med CSS så kan vi förbättra en webbplats utseende, vilket resulterar i en mer lockande användarupplevelse. </p>
+
+                        <!-- Rubrik för fråga -->
+                        <h4>Hur använder vi oss av CSS?</h4>
+                        <!-- Paragraf om hur man använder CSS:
+                        Beskriver olika metoder för att implementera CSS i webben. -->
+                        <p>CSS kan implementeras genom tre olika metoder: </p>
+                        <!-- Oordnad lista för att lista metoder för att använda CSS. -->
+                        <ul>
+                            <li>Separat CSS-fil</li>
+                            <li>I dokumentet </li>
+                            <li>Direkt i HTML-elementet</li>
+                        </ul>
+
+                        <!-- Paragraf om användning av separat CSS-fil -->
+                        <p><strong>Separat CSS-fil -</strong> Det vanligaste sättet att implementera CSS på en webbsida är genom att använda en separat CSS-fil. CSS-filen kopplas till dokumentet genom HTML-elementet &lt;link&gt; i dokumentets head sektion. CSS-filen skapas på samma sätt som ett HTML-dokument i en vanlig textredigerare, och sparas med filändelsen .css. Ett vanligt namn på denna fil är style.css, men vilket namn som helst kan användas så länge .css används som filändelse. Flera CSS-filer kan användas, och samma CSS-fil kan användas av flera HTML-dokument. </p>
+                    
+                        <!-- Paragraf om användning av CSS i dokumentet -->
+                        <p><strong>I dokumentet -</strong> CSS-formateringen kan också användas genom att lägga till HTML-elementet &lt;style&gt; i HTML-dokumentets head sektion. När CSS-koden skrivs in i ett style-element gäller  den endast för det specifika dokumentet där koden finns. Det innebär att CSS-formateringen inte kan återanvändas i andra dokument, utan måste skrivas om för varje separat dokument.</p>
+                    
+                        <!-- Paragraf om direkt användning av CSS  HTML-elementet -->
+                        <p><strong> Direkt i HTML-elementet -</strong> Det sista sättet att använda CSS är att skriva det direkt i det element som ska formatera genom att använda attributet “style”. CSS-formateringen tillämpas då endast på det element där koden är skriven vilket innebär att när formatet ska användas i ett annat element så måste koden skrivas om på nytt. Detta gör att dokumenten innehåller mycket kod som tar lång tid att ladda och är därför det minst effektiva sättet att använda CSS-formatering. </p>
+                    </div><!-- .section-item -->
+            
+                    <!-- Delavsnitt -->
+                    <!-- Om olika versioner av CSS -->
+                    <div class="section-item">
+                        <!-- Rubrik för delavsnitt -->
+                        <h3>Det finns olika versioner av CSS:</h3>
+
+                        <!-- Rubrik för fråga -->
+                        <h4>Vilka versioner finns det?</h4>
+                        <!-- Patagraf om vilka versioner av CSS som finns. -->
+                        <p>Det finns tre olika versioner av CSS, CSS1, CSS2 samt CSS3. Var och en av versionerna har infört förbättringar och nya funktioner jämfört med dess föregångare. </p>
+
+                        <!-- Paragraf om CSS1 -->
+                        <p><strong>CSS1</strong> är den första versionen som släpptes i december 1996. Med CSS1 blev det möjligt att utförande grundläggande styling, som bland annat typsnitt egenskaper, textfärg, bakgrund och textattribut. </p>
+
+                        <!-- Paragraf om CSS2 -->
+                        <p><strong>CSS2</strong> släpptes i maj 1998 och utgjorde en förbättring jämfört med CSS1 genom att introducera nya funktioner som möjliggjorde för mer avancerade layouter, positionering och stöd för olika mediatyper.</p>
+
+                        <!-- Paragraf om CSS3 -->
+                        <p><strong>CSS3</strong> är den nyaste versionen av CSS som har utvecklats och uppdaterats över tid, med olika moduler som har införts och utvecklats efter behov. CSS3 har möjliggjort skapandet av ännu mer dynamiska och engagerande webbplatser genom layout tekniker som flexbox och grid, möjligheten att skapa effekter som skuggor och övergångar, samt möjliggjort för responsiv design. </p>
+
+                        <!-- Rubrik för fråga -->
+                        <h4>Varför finns det olika versioner? (Varför är det inte bara en?)</h4>
+                        
+                        <!-- Paragraf om varför det finns det olika versioner av CSS.
+                            Anledning 1 -->
+                        <p> Det finns flera skäl till varför det finns flera versioner av CSS istället för bara en. Den första är på grund av teknisk utveckling. Webben förändras och utvecklas kontinuerligt vilket leder till att nya behov uppkommer över tid. Därför behöver standarderna för CSS anpassas och utvecklas för att möta dessa förändringar. Genom att uppdatera och införa flera versioner av CSS kan dessa förändringar mötas. </p>
+                    
+                        <!-- Paragraf om varför det finns det olika versioner av CSS.
+                            Anledning 2 -->
+                        <p>En annan anledning är på grund av stöd för olika enheter och plattformar. Flera versioner av CSS gör det möjligt att standarderna anpassas för att ge bättre stöd för olika enheter, webbplatser och plattformar. Eftersom flera versioner av CSS existerar så kan äldre enheter, webbplatser och plattformar som är uppbyggda med en äldre version av CSS fungera som vanligt och behöver därför inte göras om när en ny version av CSS släpps.</p>
+
+                        <!-- Rubrik för fråga -->
+                        <h4>Varför är det viktigt att veta vilken version som en viss CSS-egenskap tillhör? (Kan detta påverka webbplatsen?)</h4>
+
+                        <!-- Paragraf om varför det är det viktigt att veta vilken version som en viss CSS-egenskap tillhör och hur detta kan påverka webbplatsen. -->
+                        <p>Det är viktigt för utvecklare att veta vilken version en viss CSS-egenskap tillhör eftersom det kan ha inverkan på hur en webbsida tolkas och visas på olika webbläsare och enheter. Om en webbplats använder en CSS-egenskap som inte alla användares webbläsare eller enheter stödjer kan det leda till att vissa delar av webbplatsen inte fungerar som den ska hos alla användare. Vissa CSS-egenskaper och funktioner kan vara olika beroende på vilken version av CSS som används och vilken webbläsare samt enhet användaren använder. Genom att vara medveten om vilka CSS-egenskaper som tillhör vilken version av CSS kan en mer enhetlig och tillförlitlig användarupplevelse säkerställas. </p>
+                    </div><!-- ./section-item -->
+                </div><!-- section-content -->
+            </div>
+        </section>
+
+        <footer>
+            <!-- Text som visar senast uppdateringsdatum -->
+            <small>Senast uppdaterad: 2024-05-16</small>
+        </footer>
+    </body>
+</html>

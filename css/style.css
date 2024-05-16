@@ -1,0 +1,533 @@
+/* Återställning av marginaler för alla element */
+* {
+    margin: 0;
+}
+
+/* Root-variabler för alla element */
+:root {
+    --clr-primary: #27627E;
+    --clr-bg: #eef5f5;
+    --clr-secondary: #f1b24a;
+    --clr-tertiary: #409290;
+    --clr-text: #555;
+    --clr-white: #fff;
+}
+
+/* Styling av body-element */
+body {
+    font-family: "Work Sans", 'Source Sans Pro', Arial, Helvetica, sans-serif; /* Använd Work Sans som huvudtypsnitt, fallback till 'Source Sans Pro', Arial, Helvetica, sans-serif */
+    font-size: 16px; /* Ange standardstorlek till 16px */
+    color: var(--clr-text); /* Ange standarstextfärg */
+    box-sizing: border-box; /* Använd border-box för att inkludera padding och border i elementets totala bredd och höjd */
+}
+
+
+/******** Sidohuvud ********/
+/* Styling av header-elementet */
+header {
+    background-color: var(--clr-primary);/* Ange headerns backgrundsfärg */
+    color: var(--clr-white); /* Ange textfärg i header */
+    padding: 15px 50px; /* Sätt padding till 15px topp och botten, 50px vänster och höger */
+}
+
+/* Styling av rubrik i sidohuvudet */
+header h1 {
+    padding: 20px 0; /* Sätt padding till 20px topp och botten, 0px vänster och höger */
+    font-size: 40px; /* Ange fontstorlek till 40px */
+    text-transform: lowercase; /* Omvandla texten till små bokstäver */
+    letter-spacing: 2px; /* Sätt mellanrum mellan bokstäverna till 2px */
+    font-weight: 500; /* Ange font till normal vikt */
+}
+
+/******** Meny ********/
+/* Styling av menyn */
+nav {
+    background-color: var(--clr-bg); /* Ange bakgrundsfärg */
+    padding: 20px 0; /* Sätt padding till 20px topp och botten, 0px vänster och höger */
+    position: sticky; /* Positionera menyn relativt till skärmen när användaren scrollar */
+    top: 0; /* Placera menyn längst upp */
+    z-index: 10; /* Ange z-index för att placera menyn över alla andra element */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* Skugga runt nav-elementet */
+}
+
+/* Styling av oordnad lista i menyn */
+nav ul { 
+    width: 50%; /* Sätt bredden till 50% av förälderelementet */
+    margin: 0 auto; /* Centrera elementet horisontellt genom att sätta marginalerna till automatiskt till vänster och höger */
+    padding: 0px 100px; /* Sätt padding till 0px topp och botten, 100px vänster och höger */
+    display: flex; /* Använd flexbox-layout för att justera elementets layout */
+    flex-direction: row; /* Ställ in flexriktningen till rad (horisontellt) */
+    justify-content: space-between; /* Justera innehåller jämnt mellan huvudelementets utrymme */
+}
+
+/* Styling av listelementen */
+nav ul li {
+    padding-top: 5px; /* Sätt topp padding till 5px */
+    padding-bottom: 5px; /* Sätt botten padding till 5px */
+    list-style: none; /* Ta bort punkterna framför listelementen */
+    text-align: center; /* Centrera texten horisontellt */
+    text-transform: uppercase; /* Omvandla texten till stora bokstäver */
+    letter-spacing: 1px; /* Sätt mellanrum mellan bokstäverna till 1px */
+    position: relative; /* Sätt position till relativ */
+}
+
+/* Styling av länkar i listelementen */
+nav ul li a {
+    color: var(--clr-primary); /* Sätt textfärg */
+    text-decoration: none; /* Ta bord understrykning */
+    transition: all 300ms; /* Ange övergångseffekt på 300 millisekunder */
+}
+
+/* Skapa ett pseudoelement före länkarna i listelementen */
+nav ul li a::before {
+    content: ""; /* Ange innehåll till tomt */
+    display: block; /* Omvandla till ett blockelement så det kan ha bredd och höjd*/
+    height: 3px; /* Ange höjd till 3px */
+    width: 0px; /* Ange bredd till 0px */
+    background-color: var(--clr-secondary); /* Ange bakgrundsfärg */
+    position: absolute; /* Sätt position till absolut i relation till föräldrarelementet */
+    bottom: 0; /* Placera elementet längst ner i förhållande till föräldrarelementet */
+    transition: all ease-in-out 150ms; /* Ange övergångseffekt på 150 millisekunder */
+}
+
+/* Styling av pseudoelementet när listelementet har klassen "active" */
+nav ul .active a::before {
+    width: 100%; /* Sätt bredd till 100% */
+}
+
+/* Styling av pseudoelementet när muspekaren är över listelementet */
+nav ul li a:hover::before {
+    width: 100%; /* Sätt bredd till 100% */
+}
+
+/* Skapa ett efterelemnt för nav-elementet */
+nav::after {
+    content: ""; /* Ange innehåll till tomt */
+    display: table; /* Gör till en tabell för att rensa det floatade elementet */
+    clear: both; /* Rensa flotade elementet från båda sidorna av nav-elementet */
+}
+
+
+/******** Innehåll ********/
+/*** Gemensamma delar ***/
+
+/* Styling av huvudsektion för innehållet på webbsidan */
+section {
+    background-color: var(--clr-white); /* Ange bakgrungsfärg */
+    padding: 60px 80px; /* Sätt padding till 60px topp och botten, 80px vänster och höger */
+    display: flex; /* Använd flexbox-layout för att justera elementets layout */
+    justify-content: space-around;  /* Fördela jämnt utrymmet mellan och runt elementen i section-elementet */
+}
+
+/* Styling av wrapper för huvudinnehållet på webbsidan */
+section .section-wrapper {
+    width: 70%; /* Sätt bredd till 70% */
+    margin: 0 auto; /* Centrera elementet horisontellt genom att sätta marginalerna till automatiskt till vänster och höger */
+}
+
+/* Styling av innehållet i artikeln */
+section .section-content {
+    width: 80%; /* Sätt bredd till 80% av förälderelementets bredd*/
+    margin: 0 auto; /* Centrera elementet horisontellt genom att sätta marginalerna till automatiskt till vänster och höger */
+}
+
+/* Styling av h2-element inuti section-element */
+section .section-wrapper h2 {
+    margin-bottom: 20px; /* Sätt botten margin till 20px */
+    color: var(--clr-secondary); /* Ange textfärg */
+    font-size: 35px; /* Ange textstorlek till 35px */
+}
+
+/* Styling av h3-element inuti section-element */
+section .section-wrapper h3 {
+    margin-bottom: 10px; /* Sätt botten margin till 10px */
+    font-size: 20px; /* Ange textstorlek till 20px */
+    color: var(--clr-text); /* Ange textfärg */
+    position: relative; /* Ange position till relativ */
+}
+
+/* Styling av h4-element inuti section-element */
+section .section-wrapper h4 {
+    margin-top: 20px; /* Sätt topp margin till 20px */
+    margin-bottom: 15px; /* Sätt botten margin till 15px */
+}
+
+/* Styling av h5-element inuti section-element */
+section .section-wrapper h5 {
+    margin-top: 20px; /* Sätt topp margin till 20px */
+    color: var(--clr-secondary); /* Ange textfärg */
+}
+
+/* Styling av alla p-element som följer direkt efter ett h5-element */
+section .section-wrapper h5 + p {
+    margin-top: 5px; /* Sätt topp margin till 5px */
+}
+
+/* Styling av alla p-element inuti section-element */
+section .section-wrapper p {
+    margin: 15px 0; /* Sätt margin till 15px topp och botten, 0px vänster och höger */
+    line-height: 125%; /* Ange linjehöjd till 125% */
+}
+
+/* Styling av strong-taggar inuti p-element */
+section .section-wrapper p strong {
+    color: var(--clr-tertiary); /* Ange textfärg */
+}
+
+/* Styling av länkar inuti section-element  */
+section .section-wrapper a {
+    color: var(--clr-text); /* Ange textfärg för vanliga länkar */
+}
+
+/* Styling av besökta länkar inuti section-element */
+section .section-wrapper a:visited {
+    color: var(--clr-primary); /* Ange textfärg för besökta länkar */
+}
+
+/* Styling av hover-effekt för länkar inuti section-element */
+section .section-wrapper a:hover {
+    color: var(--clr-secondary); /* Ange textfärg vid hover för länkar*/
+}
+
+/* Styling av delavsnitten inuti section-elementet */
+section .section-wrapper .section-item {
+    margin: 40px 0; /* Sätt marginal till 40px topp och botten, 0px vänster och höger */
+}
+
+/* Styling av huvudbilden inuti section-elementet */
+section .section-wrapper .main-image {
+    width: 100%; /* Sätt bredd till 100% av förälderelementets bredd */
+}
+
+/* Styling av img-element inuti section-elementet */
+section .section-wrapper .main-image img {
+    width: 100%; /* Sätt bredd till 100% av förälderelementets bredd */
+}
+
+
+/*** index.html ***/
+/* Styling av kodexempel */
+.coding_example {
+    background-color: var(--clr-bg); /* Ange bakgrundsfärg */
+    color: var(--clr-primary); /* Ange textfärg */
+    padding: 0 3px; /* Sätt padding till 0px topp och botten, 3px vänster och höger */
+    font-family: monospace, 'Source Sans Pro', Arial, Helvetica, sans-serif; /* Ange monospace som huvudtypsnitt, fallback till 'Source Sans Pro', Arial, Helvetica, sans-serif */
+}
+
+/* Styling av CSS exempel */
+.css_example {
+    margin: 15px 0; /* Sätt marginal till 15px topp och botten, 0px vänster och höger */
+    padding: 10px 15px; /* Sätt padding till 10px topp och botten, 15px vänster och höger */
+    background-color: var(--clr-bg); /* Ange bakgrundsfärg */
+    color: var(--clr-primary); /* Ange textfärg */
+    font-family: monospace, 'Source Sans Pro', Arial, Helvetica, sans-serif; /* Ange monospace som huvudtypsnitt, fallback till 'Source Sans Pro', Arial, Helvetica, sans-serife */
+    font-size: 16px; /* Sätt textstorlek till 16px */
+}
+
+/* Styling av p-element inuti CSS-exempel */
+.css_example p {
+    text-align: left; /* Vänsterjustera text */
+}
+ 
+/* Styling av span-element inuti CSS-exempel */
+.css_example span {
+    display: block; /* Omvandla till ett blockelement så det kan ha bredd och höjd*/
+}
+
+/* Styling av filnamn inui CSS-exempel */
+.css_example .file_name {
+    color: var(--clr-text); /* Ange textfärg */
+    font-family: "Work Sans", 'Source Sans Pro', Arial, Helvetica, sans-serif; /* Använd Work Sans som huvudtypsnitt, fallback till 'Source Sans Pro', Arial, Helvetica, sans-serif */
+    font-weight: bold; /* Ange fetstil */
+    text-align: end; /* Högerjustera text */
+}
+
+/* Styling av en indentering i CSS-exempel */
+.css_example .indent_1 {
+    text-indent: 30px; /* Indentera text med 30px */
+}
+
+/* Styling av två indenteringar i CSS-exempel */
+.css_example .indent_2 {
+    text-indent: 60px; /* Indentera text med 60px */
+}
+
+/* Styling av tre indenteringar i CSS-exempel */
+.css_example .indent_3 {
+    text-indent: 90px; /* Indentera text med 90px */
+}
+
+/* Styling av sidofältet */
+aside {
+    width: 30%; /* Ange bredd till 30% av förälderelementets bredd */
+}
+
+/* Styling av formuläret inuti sidofältet */
+aside form {
+    width: 80%; /* Ange bredd till 80% av förälderelementets bredd */
+    margin: 0 auto; /* Centrera elementet horisontellt genom att sätta marginalerna till automatiskt till vänster och höger */
+    padding: 60px 20px; /* Sätt padding till 60px topp och botten, 20px vänster och höger */
+    background: var(--clr-bg); /* Ange bakgrundsfärg */
+    border-radius: 20px; /* Ange rundade hörn med radie på 20px */
+    display: flex; /* Använd flexbox-layout för att justera elementets layout */
+    flex-direction: column; /* Ställ in flexriktningen till kolumn (vertikalt) */
+    justify-content: center; /* Centrera elementet */
+}
+
+/* Styling av rubrik i formuläret inuti sidofältet */
+aside form h3 {
+    margin-bottom: 15px; /* Sätt botten margin till 15px */
+    font-size: 25px; /* Sätt fontstorlek till 25px */
+    text-align: center; /* Centrera text horisontellt */
+    color: var(--clr-primary); /* Ange textfärg */
+}
+
+/* Styling av oordnad lista i formuläret inuti sidofältet */
+aside form ul {
+    padding: 0 20px; /* Sätt padding till 0px topp och botten, 20px vänster och höger */
+}
+
+/* Styling av listelement i formuläret inuti sidofältet */
+aside form ul li {
+    margin: 15px 0; /* Sätt marginal till 15px topp och botten, 0px vänster och höger  */
+    list-style: none; /* Ta bort punkterna framför listelementen */
+    display: flex; /* Använd flexbox-layout för att justera elementets layout */
+    flex-direction: column; /* Ställ in flexriktningen till kolumn (vertikalt) */
+}
+
+/* Styling av etikett för formulärets fält inuti sidofältet */
+aside form ul li label {
+    margin-bottom: 5px; /* Sätt botten margin till 5px */
+    font-size: 15px; /* Ange fontstorlek till 15px */
+    color: var(--clr-tertiary); /* Ange textfärg */
+}
+
+/* Styling av input-fält i formuläret inuti sidofältet */
+aside form ul li input {
+    padding: 7px 10px; /* Sätt padding till 7px topp och botten, 10px vänster och höger */
+    border: none; /* Ta bord ram */
+    letter-spacing: 0.5px; /* Ange teckenavstånd till 0.5px */
+}
+
+/* Styling av platshållartext för input-fält i formuläret */
+aside form ul li input::placeholder { 
+    font-family: "Work Sans", 'Source Sans Pro', Arial, Helvetica, sans-serif; /* Använd Work Sans som huvudtypsnitt, fallback till 'Source Sans Pro', Arial, Helvetica, sans-serif */
+    color: var(--clr-text); /* Ange textfärg */
+    opacity: 0.5; /* Ange opacitet */
+}
+
+/* Styling av knapp för att skicka formuläret */
+aside form input[type="submit"] {
+    width: 140px; /* Ange bredd till 140px */
+    margin: 15px auto 0; /* Centrera elementet horisontellt genom att sätta marginalerna till automatiskt till vänster och höger */
+    padding: 10px 0; /* Sätt padding till 10px topp och botten, 0px vänster och höger */
+    background-color: var(--clr-primary); /* Ange bakgrundsfärg */
+    font-size: 12px; /* Sätt fontstorlek till 12px */
+    color: var(--clr-white); /* Ange textfärg */
+    text-transform: uppercase; /* Omvandla texten till stora bokstäver */
+    letter-spacing: 1px; /* Sätt mellanrum mellan bokstäverna till 1px */
+    border: none; /* Ta bord ram */
+    border-radius: 5px; /* Ange rundade hörn med radie på 5px */
+    transition: all ease-in-out 200ms; /* Ange övergångseffekt på 200 millisekunder */
+}
+
+/* Styling av hover-effekt för submit knappen inuti formulär */
+form input[type="submit"]:hover {
+    background-color: var(--clr-tertiary); /* Ange bakgrundsfärg */
+}
+
+
+/*** forfattare.html ***/
+/* Styling av listor i artikellistor */
+.section-wrapper .section-lists {
+    display: flex; /* Använd flexbox-layout för att justera elementets layout */
+    justify-content: start; /* Justera placering av elementen längs starten av huvudaxeln */
+    gap: 80px; /* Ange avstånd mellan listelementen */
+}
+
+/* Styling av ordnade listor i artikellistor */
+.section-wrapper .section-lists .list ol {
+    padding: 0 20px; /* Sätt padding till 0px topp och botten, 20px vänster och höger */
+}
+
+/* Styling av oordnade listor i artikellistor */
+.section-wrapper .section-lists .list ul {
+    padding: 0; /* Sätt padding till 0px */
+}
+
+
+/*** ommig.html ***/
+/* Styling av element inuti artikelobjekt */
+.section-wrapper .section-item .item {
+    margin-bottom: 15px; /* Sätt botten margin till 15px */
+}
+
+/* Styling av delavsnitt inuti artikelobjekt */
+.section-wrapper .section-item {
+    width: 100%; /* Ange bredd till 100% av förälderelementets bredd */
+}
+
+/* Styling av varje "item" element */
+.section-wrapper .section-item .item {
+    margin: 20px 0; /* Ange margin till 20px topp och botten, 0px vänster och höger */
+}
+
+/* Styling av huvudtext */
+.section-wrapper .section-item .main {
+    font-weight: bold; /* Ange fetstil */
+    display: flex; /* Använd flexbox-layout för att justera elementets layout */
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Styling av namn div-element innehållande namn för utbildning */
+.section-wrapper .section-item .main .name {
+    width: 70%; /* Ange bredd till 70% av föräldrarelementet */
+}
+
+/* Styling av namn div-element innehållande avslutad datum för utbildning */
+.section-wrapper .section-item .main .date {
+    color: var(--clr-secondary); /* Ange textfärg */
+    width: 30%; /* Ange bredd till 40% av föräldrarelementet */
+    display: flex; /* Använd flexbox-layout för att justera elementets layout */
+    justify-content: end; /* Placera innehållet i slutet av containern */
+}
+
+
+/******** Sidfot ********/
+/* Styling av footer-elementet */
+footer {
+    padding: 25px; /* Sätt padding till 25px topp, botten, vänster och höger */
+    background-color: var(--clr-primary); /* Ange bakgrundsfärg */
+    color: var(--clr-white); /* Ange textfärg */
+    text-align: center; /* Centrera texten horisontellt */
+    text-transform: uppercase; /* Omvandla texten till stora bokstäver */
+    clear: both; /* Rensa floats */
+}
+
+
+/******* Responsiv laout: Anpassar layouten för olika skärmstorleker *******/
+/* När skärmen är mindre än 1200px men större än 1000px */
+@media (max-width: 1200px) { 
+    /* Jutera layouten för innehållet på webbsidan till en kolumn */
+    section {
+        flex-direction: column; /* Sättt in flexriktningen till kolumn (vertikalt) */
+        padding-left: 0px; /* Ange vänster sida padding till 0px */
+        padding-right: 0px; /* Ange höger sida padding till 0px */
+    }
+    
+    /* Justera storlek av wrapper för huvudinnehållet på webbsidan */
+    section .section-wrapper {
+        width: 85%; /* Sätt bredd till 85% */
+        margin: 0 auto; /* Centrera elementet horisontellt genom att sätta marginalerna till automatiskt till vänster och höger */
+    }
+
+    /* Justera storlek av sidofältet */
+    aside {
+        width: 100%; /* Sätt bredd till 100% */
+        margin: 0 auto; /* Centrera elementet horisontellt genom att sätta marginalerna til automatiskt till vänster och höger */
+    }
+
+    /* Justera storlek av formuläret inuti sidofältet */
+    aside form {
+        width: 65%; /* Ange bredd till 80% av förälderelementets bredd */
+        margin-top: 20px; /* Sätt topp margin till 20px */
+    }
+    
+}
+
+/* När skärmen är mindre än 1000px men större än 600px */
+@media (max-width: 1000px) {     
+    /* Justera storlek av wrapper för huvudinnehållet på webbsidan */
+    section .section-wrapper {
+        width: 100%; /* Sätt bredd till 100% */
+        margin: 0 auto; /* Centrera elementet horisontellt genom att sätta marginalerna till automatiskt till vänster och höger */
+    }
+
+    /* Justera storlek  och padding av oordnad lista i menyn */
+    nav ul { 
+        width: 70%; /* Sätt bredden till 70% av förälderelementet */
+        padding: 0px ; /* Sätt padding till 0px */
+    }
+
+    /* Justera storlek av formuläret inuti sidofältet */
+    aside form {
+        width: 75%; /* Ange bredd till 80% av förälderelementets bredd */ 
+    }
+}
+
+/* När skärmen är mindre än 700px. */
+@media (max-width: 700px) {
+    /* Justera marginaler för navigationsmenyn samt ta bort positionen "sticky"*/
+    nav {
+        padding: 0; /* Sätt padding till 0px */
+        position: unset; /*  ta bort positionen "sticky" */
+    }
+
+    /* Justera oordnad lista i menyn */
+    nav ul { 
+        width: 100%; /* Sätt bredden till 100% av förälderelementet */
+        padding: 0px ; /* Sätt padding till 0px */
+        flex-direction: column; /* Sättt in flexriktningen till kolumn (vertikalt) */
+    }
+    
+    /* Lägg till en övergångseffekt på li elememtet i menyn*/
+    nav ul li {
+        transition: all ease-in-out 250ms; /* Ange övergångseffekt på 250 millisekunder */
+    }
+
+    /* Justera display egenskap samt padding på länk i menyn */
+    nav ul li a {
+        display: block; /* Omvandla till ett blockelement så det kan ha bredd och höjd*/
+        padding: 15px 0; /* Sätt padding till 15px topp och botten, 0px vänster och höger */
+    }
+
+    /* Styling av listelementet när det har klassen "active" */
+    nav ul li.active {
+        background-color: var(--clr-secondary);
+    }
+
+    /* Styling av länk i menyn när det har klassen "active" */
+    nav ul .active a {
+        color: var(--clr-white);
+        font-weight: 500;
+    }
+
+    /* Styling av hover-effekt för listelementen i menyn*/
+    nav ul li:hover {
+        background-color: var(--clr-secondary);
+    }
+
+    /* Styling av hover-effekt för länkar i menyn*/
+    nav ul li:hover a {
+        color: var(--clr-white);
+        font-weight: 500;
+    }
+    
+    /* Styling av pseudoelementet när listelementet har klassen "active" */
+    nav ul .active a::before {
+        width: 0%; /* Sätt bredd till 100% */
+    }
+
+    /* Justera bredd på listelementet i menyn när muspekaren är över */
+    nav ul li a:hover::before {
+        width: 0%; /* Sätt bredd till 100% */
+    }
+
+    /* Jutera layouten för innehållet i huvudtext i tabellen */
+    .section-wrapper .section-item .main {
+        flex-direction: column;
+    }
+
+    /* Justera bredd på div-elementet innehållande skolans namn */
+    .section-wrapper .section-item .main .name {
+        width: 100%; /* Ange bredd till 100% */
+    }
+
+    /* Justera bredd på div-elementet innehållande datum för avslutad utbildning*/
+    .section-wrapper .section-item .main .date {
+        width: 100%; /* Ange bredd till 100% */
+        font-size: 15px; /* Ange textstorlek till 15px */
+        justify-content: start; /* Placera innehållet i början av containern */
+    }
+}

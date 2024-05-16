@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <!-- Titel på webbsidan -->
+        <title>Min Webbsida</title>
+        <!-- Föranslut till Googles typsnittsservrar -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Importera och tillämpa typsnitt "Work Sans"-->
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Länk till extern CSS-stilmall -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <!-- Rubrik för webbsidan -->
+            <h1>Min <span>Webbsida</span></h1>
+        </header>
+
+       <!-- Meny -->
+        <nav>
+            <ul>
+                <!-- Navigationslänkar -->
+                <li><a href="index.html">Start</a></li>
+                <li><a href="forfattare.html">Om en Författare</a></li>
+                <li><a href="omcss.html">Om CSS</a></li>
+                <li class="active"><a href="ommig.html">Om mig</a></li><!-- Den sida som för närvarande visas -->
+            </ul>
+        </nav>
+
+        <!--  Huvudsektion för innehållet på webbsidan -->
+        <section>
+
+
+            <!-- Wrapper för huvudinnehållet på webbsidan -->
+            <div class="section-wrapper">
+                <div class="section-content">
+                    <!-- Rubrik -->
+                    <h2>Om mig</h2>
+
+                    <!-- Huvudbild -->
+                    <img class="main-image" src="img/img-me.jpg" alt="Picture of me">
+
+                    <!-- Delavsnitt -->
+                    <!-- Om mig -->
+                    <div class="section-item">
+                        <p>Hej, mitt namn är Moa Söderberg. Jag är 30 år och bor för tillfället i Gävle men jag spenderar också mycket tid i Virginia, USA, där min fästman bor. Min fästman och jag befinner oss mitt i en ansöknigsprocess för ett K1-visum, även känt som ett förlovningsvisum, eftersom jag planerar att flytta till honom.
+                        <br><br><!-- Ny rad -->
+                        Under fyra år, fram till oktober 2023, bodde jag i Tokyo, Japan. Under den tiden studerade jag japanska vid en språkskola och informationsbehandlingsprogrammering vid en högskola. Jag avslutade min utbildning vid högskolan i slutet av september 2023 och återvände strax därefter till Sverige. Sedan dess har jag fortsatt att utveckla mina kunskaper genom att delta i olika programmeringskurser vid olika universitet i Sverige. 
+                        <br><br><!-- Ny rad -->
+                        Efter min planerade flytt till USA har jag för avsikt att ansöka till en högskola där för att fortsätta min utbildning. Mitt mål är att antingen fokusera på webbutveckling eller programmering genom en ettårig utbildning, vilket sedan kommer att lägga grunden för mina framtida jobbansökningar i USA. </p>
+                    </div><!-- ./section-item -->
+
+                    <!-- Delavsnitt -->
+                    <!-- Min utbildning -->
+                    <div class="section-item">
+                        <!-- Rubrik för delavsnittet -->
+                        <h3>Utbildning</h3>
+
+                        <!-- Första utbildningen -->
+                        <div class="item">
+                            <!-- Huvudrad för utbildningsnamn och datum -->
+                            <div class="main">
+                                <!-- Utbildningsnamn -->
+                                <div class="name">Specialisdiviplom i Informationsbehandlingsprogrammering</div>
+                                <!-- Datum för avslutad utbildning -->
+                                <div class="date">September 2023</div>
+                            </div>
+                            <!-- Rad för utbildningsplats -->
+                            <div class="notmain">
+                                <!-- Plats för utbildning -->
+                                <div>HAL Tokyo, Tokyo, Japan</div>
+                            </div>
+                        </div><!-- ./item -->
+
+                        <!-- Andra utbildningen -->
+                        <div class="item">
+                            <!-- Huvudrad för utbildningsnamn och datum -->
+                            <div class="main">
+                                <!-- Utbildningsnamn -->
+                                <div class="name">Avslutningsintyg i Studier i Japanska</div>
+                                <!-- Datum för avslutad utbildning -->
+                                <div class="date">September 2021</div>
+                            </div>
+                            <!-- Rad för utbildningsplats -->
+                            <div class="notmain">
+                                <!-- Plats för utbildning -->
+                                <div>KAI Japanese Language School, Tokyo, Japan</div>
+                            </div>
+                        </div><!-- ./item -->
+
+                        <!-- Tredje utbildningen -->
+                        <div class="item">
+                            <!-- Huvudrad för utbildningsnamn och datum -->
+                            <div class="main">
+                                <!-- Utbildningsnamn -->
+                                <div class="name">Gymnasieingenjörsexamen i Produktions- och Automtionsteknik</div>
+                                <!-- Datum för avslutad utbildning -->
+                                <div class="date">Juni 2013</div>
+                            </div>
+                            <!-- Rad för utbildningsplats -->
+                            <div class="notmain">
+                                <!-- Plats för utbildning -->
+                                <div>Rinmangymnasiet, Eskilstuna, Sverige</div>
+                            </div>
+                        </div><!-- ./item -->
+
+                        <!-- Fjärde utbildningen -->
+                        <div class="item">
+                            <!-- Huvudrad för utbildningsnamn och datum -->
+                            <div class="main">
+                                <!-- Utbildningsnamn -->
+                                <div class="name">Gymnasieexamen i Teknik Design</div>
+                                <!-- Datum för avslutad utbildning -->
+                                <div class="date">Juni 2012</div>
+                            </div>
+                            <!-- Rad för utbildningsplats -->
+                            <div class="notmain">
+                                <!-- Plats för utbildning -->
+                                <div>Härnösands Gymnasium, Härnösand, Sverige</div>
+                            </div>
+                        </div><!-- ./item -->
+                    </div><!-- ./section-item -->
+
+                    <!-- Delavsnitt -->
+                    <!-- Kontakt -->
+                    <div class="section-item">
+                        <!-- Rubrik för delavsnittet -->
+                        <h3>Kontakt</h3>
+                        <!-- Text för kontaktinformationen -->
+                        <p>Vid eventuella frågor eller för kontakt, vänligen melja mig på <strong>moamariasoderberg@gmail.com</strong>.</p>
+                    </div><!-- ./section-item -->
+                </div><!-- ./section-content -->
+            </div><!-- ./section-wrapper -->
+        </section>
+
+        <footer>
+            <!-- Text som visar senast uppdateringsdatum -->
+            <small>Senast uppdaterad: 2024-05-16</small>
+        </footer>
+    </body>
+</html>

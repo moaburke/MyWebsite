@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <!-- Titel på webbsidan -->
+        <title>Min Webbsida</title>
+        <!-- Föranslut till Googles typsnittsservrar -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Importera och tillämpa typsnitt "Work Sans"-->
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Länk till extern CSS-stilmall -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <!-- Rubrik för webbsidan -->
+            <h1>Min <span>Webbsida</span></h1>
+        </header>
+
+        <!-- Meny -->
+        <nav>
+            <ul>
+                <!-- Navigationslänkar -->
+                <li class="active"><a href="index.html">Start</a></li><!-- Den sida som för närvarande visas -->
+                <li><a href="forfattare.html">Om en Författare</a></li>
+                <li><a href="omcss.html">Om CSS</a></li>
+                <li><a href="ommig.html">Om mig</a></li>
+            </ul>
+        </nav>
+
+        <!--  Huvudsektion för innehållet på webbsidan -->
+        <section>
+            
+
+            <!-- Wrapper för huvudinnehållet på webbsidan -->
+            <div class="section-wrapper">
+                <div class="section-content">
+                    <!-- Rubrik -->
+                    <h2>Att använda CSS</h2>
+
+                    <!-- Delavsnitt -->
+                    <!-- Skillnad mellan inline CSS och externa stilmallar -->
+                    <div class="section-item">
+                        <!-- Rubrik för fråga -->
+                        <h3>Vad är skillnaden mellan “inline” CSS och externa stilmallar?</h3>
+
+                        <p>CSS kan implementeras genom tre olika metoder: </p>
+                        <!-- Oordnad lista för att lista metoder för att använda CSS. -->
+                        <ul>
+                            <li>Inline CSS</li>
+                            <li>Intern stilmall</li>
+                            <li>Extern stilmall</li>
+                        </ul>
+                    </div><!-- ./section-item -->
+
+                    <!-- Delavsnitt -->
+                    <!-- Förklaring av inline CSS -->
+                    <div class="section-item">
+                        <!-- Rubrik för delavsnittet -->
+                        <h4>Inline CSS</h4>
+
+                        <!-- Förklaring av inline CSS -->
+                        <p>Inline CSS används för att formatera ett specifikt element genom att använda attributet <span class="coding_example">style</span> direkt i HTML-elementet. </p>
+
+                        <!-- Exempel på användning av inline CSS -->
+                        <p>För att formattera ett specifikt p-element kan vi skriva följande: </p>
+                        <!-- Exempel HTML-kod -->
+                        <div class="css_example">
+                            <p>&lt;p style="color: red; font-size: 20px;"&gt;En röd paragraf&lt;/p&gt;</p>
+                        </div><!-- ./css_example -->
+                        <p> I detta exempel tillämpas en röd färg och en textstorlek på 20px på p-elementet.</p>
+
+                        <!-- Fördel med inline CSS -->
+                        <h5>Fördel med Inline CSS</h5>
+                        <p>Inline CSS är användbart för snabba och specifika stiländringar på enskilda HTML-element. Dessa stiländringar tillämpas endast på det specifika HTML-elementet där koden är skriven. Inline CSS kan därför vara fördelaktikt för stiländringar som inte kommer att användas på andra delar av webbsidan.</p>
+
+                        <!-- Nackdel med inline CSS -->
+                        <h5>Nackdel med Inline CSS</h5>
+                        <p>Eftersom inline CSS endast tillämpar stiländringar på specifika HTML-elementet blir det mindre effektivt när samma stiländringar används på flera delar av webbplatsen. Att formatera varje enskilt HTML-element blir inte bara tidskrävande, utan ökar även risken för fel. Dessutom blir koden svår att underhålla, och den ökade filstorleken på HTML-dokumentet kan påverk webbsidans prestanda negativt.</p>
+                    </div><!-- ./section-item -->
+
+                    <!-- Delavsnitt -->
+                    <!-- Förklaring av intern stilmall -->
+                    <div class="section-item">
+                        <!-- Rubrik för delavsnittet -->
+                        <h4>Intern stilmall</h4>
+
+                        <!-- Förklaring av intern stilmall -->
+                        <p>En intern stilmall är en stilmall som används för att tillämpa stiländringar i ett specifikt HTML-dokument. Stiländringarna definieras inom <span class="coding_example">&lt;style&gt;</span>-taggar i head-sektion av HTML-dokumentet. </p>
+
+                        <!-- Exempel på användning av intern stilmall -->
+                        <p>För att formattera p-element likt exemplet ovan med <strong>intern stilmall </strong>kan vi skriva följande: </p>
+                        <!-- Exempel HTML-kod -->
+                        <div class="css_example">
+                            <span>&lt;!DOCTYPE html&gt;</span>
+                            <span>&lt;html&gt;</span>
+                            <span>&lt;head&gt;</span>
+                            <span class="indent_1">&lt;style&gt;</span>
+                            <span class="indent_2">p &#123;</span>
+                            <span class="indent_3">color: red;</span>
+                            <span class="indent_3">font-size: 20px;</span>
+                            <span class="indent_2">&#125;</span>
+                            <span class="indent_1">&lt;/style&gt;</span>
+                            <span>&lt;/head&gt;</span>
+                            <span>&lt;body&gt;</span>
+                            <span class="indent_1">&lt;p&gt;En röd paragraf&lt;/p&gt;</span>
+                            <span>&lt;/body&gt;</span>
+                            <span>&lt;/html&gt;</span>
+                        </div><!-- ./css_example -->
+
+                        <!-- Fördel med intern stilmall -->
+                        <h5>Fördel med Intern Stilmall</h5>
+                        <p>Att använda en intern stilmall är fördelaktikt för mindre projekt eller på enskilda sidor där behover av att skapa en separat CSS-fil är minimalt. Genom att definiera stilar internt kan stiländringar kan göras snabbt och hanteras enkelt, vilker sparar tid och minskar komplexiteten i projektet. </p>
+
+                        <!-- Nackdel med intern stilmall -->
+                        <h5>Nackdel med Intern Stilmall</h5>
+                        <p>Stilinformationen som tillämpas genom inline CSS är bunden till det specifika HTML-dokumen där det definieras och kan inte återanvändas mellan flera sidor. Detta kräver att stildefinitionerna upprepas i varje HTML-dokument, vilket kan göra underhåll och ändrig av kod mindre effektiv. </p>
+                    </div><!-- ./section-item -->
+
+                    <!-- Delavsnitt --> 
+                    <!-- Förklaring av extern stilmall -->
+                    <div class="section-item">
+                        <!-- Rubrik för delavsnittet -->
+                        <h4>Extern stilmall</h4>
+
+                        <!-- Förklaring av extern stilmall -->
+                        <p>En extern stilmall använder en separat CSS-fil som innehåller all stilinformation. Denna CSS-fil länkas till dokumentet genom HTML-elementet <span class="coding_example">&lt;link&gt;</span> placerat i head-sektionen av varje HTML-dokument där stilinformationen ska tillämpas.</p>
+
+                        <!-- Exempel på användning av extern stilmall -->
+                        <p>För att formattera p-element likt exemplet ovan med <strong>extern stilmall </strong>kan vi skriva följande: </p>
+
+                        <!-- Exempel HTML-kod -->
+                        <div class="css_example">
+                            <span class="file_name">index.html</span>
+                            <span>&lt;!DOCTYPE html&gt;</span>
+                            <span>&lt;html&gt;</span>
+                            <span>&lt;head&gt;</span>
+                            <span class="indent_1">&lt;link rel="stylesheet" href="style.css"&gt;</span>
+                            <span>&lt;/head&gt;</span>
+                            <span>&lt;body&gt;</span>
+                            <span class="indent_1">&lt;p&gt;En röd paragraf&lt;/p&gt;</span>
+                            <span>&lt;/body&gt;</span>
+                            <span>&lt;/html&gt;</span>
+                        </div><!-- ./css_example -->
+                        
+                        <!-- Exempel HTML-kod -->
+                        <div class="css_example">
+                            <span class="file_name">style.css</span>
+                            <span>p &#123;</span>
+                            <span class="indent_1">color: red;</span>
+                            <span class="indent_1">font-size: 20px;</span>
+                            <span>&#125;</span>
+                        </div><!-- ./css_example -->
+
+                        <!-- Fördel med extern stilmall -->
+                        <h5>Fördel med Extern Stilmall</h5>
+                        <p>Att avända en extern stillmall är den vanligaste metoden för att impletera CSS. Genom att separera stilmallen från HTML-koden kan stilinformaitonen återanvändas över hela webbplatsen, vilket möjliggör enkel tillämpning och underhåll av ett enheltligt utseende. Genom att placera stilmallen i en separat fil minskas storleken på HTML-filen, vilket resulterar i snabbare sidoladdningar och förbättrad användaruppleveslse.</p>
+
+                        <!-- Nackdel med extern stilmall -->
+                        <h5>Nackdel med Extern Stilmall</h5>
+                        <p>Trots de många fördelarna med externa stilmallar finns det även några nackdelar. För det första innebär användningen av en extern stillmall ett ökat beroendeförhållande. Webbplatsens utseende är beroende av att länken till stilmallen är fungerande för att kunna tillämpa stilinformationen korrekt. Vid eventuella problem med länken kan webbplatsen visas utan stilinformaitonen, vilket kan resultera i en negativ användaruppleveslse. För det andra kan användning av externa stilmallar leda till ökad laddningstid varje gång webbplatsen laddar en sida. Detta beror på att varje gång en sida laddas måste stilmallen hämpas separat, vilket innebär en extra HTTP-begäran och därmed en ökning av sidans laddningstid.</p>
+                    </div><!-- ./section-item -->
+                </div><!-- ./section-content -->
+            </div>
+
+            <!-- Sidofält med formulär -->
+            <aside>
+                <form action="#">
+                        <!-- Rubrik för form -->
+                        <h3>Nyhetsbrev</h3>
+                   
+                        <!-- Oordnad lista för enklare struktur -->
+                        <ul>
+                            <!-- Namn -->
+                            <li>
+                                <label for="name">Namn: </label>
+                                <input type="text" name="name" id="name" placeholder="Namn här...">
+                            </li>
+                            <!-- Epost-->
+                            <li>
+                                <label for="email">Epost: </label>
+                                <input type="email" name="email" id="email" placeholder="tex. moa@mau.se">
+                            </li>
+                        </ul>
+                        <!-- Prototyp submit knapp för att skicka formuläret -->
+                        <input type="submit" value="Skicka">
+                </form>
+            </aside>
+        </section>
+
+        <footer>
+            <!-- Text som visar senast uppdateringsdatum -->
+            <small>Senast uppdaterad: 2024-05-16</small>
+        </footer>
+    </body>
+</html>
