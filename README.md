@@ -21,24 +21,6 @@ This project is a website presented entirely in Swedish. It provides information
 - **CSS**: Styling language used to design and layout the web pages.
 - **Google Fonts**: Used to import and apply the "Work Sans" font for improved typography.
 
-## Getting Started
-
-To view or modify this website, follow these steps:
-
-1. **Clone the Repository**: 
-    ```bash
-    git clone https://github.com/yourusername/your-repository.git
-    ```
-
-2. **Navigate to the Project Directory**:
-    ```bash
-    cd your-repository
-    ```
-
-3. **Open the Website**:
-   - Open the `index.html` file in your web browser to view the homepage.
-   - You can also open other pages like `forfattare.html`, `omcss.html`, and `ommig.html` in your browser.
-
 ## File Structure
 
 - `index.html`: The main HTML file for the homepage.
